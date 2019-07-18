@@ -136,7 +136,10 @@ while true {
 print("---")
 
 let områdesbokstäver = platser.keys.sorted()
+var totalt = 0
 for område in områdesbokstäver {
     let tilldeladePlatser = platser[område] ?? []
     print("Område",område,"har", tilldeladePlatser.count, "tilldelade platser.")
+    totalt = totalt + tilldeladePlatser.count
 }
+print("Totalt", totalt,"fördelade platser.")
